@@ -1,0 +1,19 @@
+<html ng-app="app">
+	<title>
+		ngModel
+	</title>
+	<body>
+		<div ng-controller="MainController">
+			<input ng-model="mydata.val">
+			<!-- <button ng-click="mydata='123'">Click</button> -->
+			<h1>{{mydata.val}}</h1>
+			<div ng-controller="SubController">
+				<input ng-model="mydata.val">
+				<h1>{{mydata.val}}</h1>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
