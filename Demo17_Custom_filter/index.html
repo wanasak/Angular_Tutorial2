@@ -1,0 +1,17 @@
+<html ng-app="app">
+	<title>Custom Filters</title>
+	<body>
+		<div ng-controller="MainController">
+			<!-- <input ng-model="mydata.str">
+			{{mydata.str | charlimit}} -->
+			
+			<input ng-model="mydata.str">
+			<div ng-repeat="user in mydata.arr | candrink:mydata.str">
+				{{user}}
+			</div>
+		</div>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
