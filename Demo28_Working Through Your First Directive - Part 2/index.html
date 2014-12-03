@@ -1,0 +1,20 @@
+<html ng-app="app">
+	<title>Working Through Your First Directive - Part 2</title>
+	<body>
+		<div ng-controller="MainController">
+			<!-- <input ng-model="photo.date"/>
+			<oldphoto photo-src="{{photo.url}}" caption="{{photo.date}}" /> -->
+			<photo photo-src="photo.url" capstring="{{photo.date}}"/>
+		</div>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script id="photo.html" type="text/ng-template">
+		<figure>
+			<img width="500px" ng-src="{{photoSrc}}" />
+			<figcaption>{{caption}}</figcaption>
+			<input ng-model="caption"/>
+		</figure>
+	</script>
+	</body>
+</html>

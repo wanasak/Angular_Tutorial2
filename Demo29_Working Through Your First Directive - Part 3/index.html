@@ -1,0 +1,22 @@
+<html ng-app="app">
+	<title>Working Through Your First Directive - Part 3</title>
+	<body>
+		<div ng-controller="MainController">
+			<button ng-click="callme('str')">Click Me</button>
+			
+			<photo photo-src="photo.url" capstring="{{photo.date}}" local-func="callme(msg)" />
+			<!-- <input ng-model="photo.date" />
+			<photo photo-src="photo.url" capstring="{{photo.date}}" local-func="callme(msg)" /> -->
+		</div>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/ng-template" id="photo.html">
+		<figure>
+			<img width="500px" ng-src="{{photoSrc}}" />
+			<figcaption>{{caption}}{{mydata}}</figcaption>
+			<button ng-click="localFunc({msg:mydata})">Click Me</button>
+		</figure>
+	</script>
+	</body>
+</html>
